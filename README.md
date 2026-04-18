@@ -22,7 +22,7 @@
 
 ## 🛠 Tech Stack
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=py,java,js,ts,react,nodejs,git,github,docker,mysql,aws&theme=dark&perline=8" />
+  <img src="https://skillicons.dev/icons?i=py,arduino, apple, matlab ,git,github,docker,mysql,aws&theme=dark&perline=8" />
 </p>
 
 ---
