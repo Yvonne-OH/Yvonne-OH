@@ -45,30 +45,79 @@
   <img src="https://visitor-badge.laobi.icu/badge?page_id=Yvonne-OH.Yvonne-OH" />
 </p>
 
-🧾 Full Publication List
-2026
-Toward Physically Consistent Driving Video World Models under Challenging Trajectories
-arXiv preprint
-[Paper]
-2025
-Genesis: Multimodal Driving Scene Generation with Spatio-Temporal and Cross-Modal Consistency
-arXiv preprint
-[Paper]
-WorldSplat: Gaussian-Centric Feed-Forward 4D Scene Generation for Autonomous Driving
-arXiv preprint
-[Paper]
-Rethinking Driving World Model as Synthetic Data Generator for Perception Tasks
-arXiv preprint
-[Paper]
-DriveMRP: Enhancing Vision-Language Models with Synthetic Motion Data for Motion Risk Prediction
-arXiv preprint
-[Paper]
-2023
-Research on Low Illumination Image Enhancement Algorithm and Its Application in Driver Monitoring System
-WCX SAE World Congress Experience
-2022
-Driver Lane Change Intention Recognition Based on Attention Enhanced Residual-MBi-LSTM Network
-IEEE Access
-(Citations: 42)
-Others
-Pipeline for Fast Digital Twin Development and Integration in Driving Simulation
+
+---
+
+## 📚 Publications
+
+🔗 [Google Scholar](https://scholar.google.com/citations?user=NXIYuY0AAAAJ&hl=en)
+
+> Research Interests: Autonomous Driving · World Models · Video Generation · Diffusion Models · Efficient Inference
+
+### 🌟 Selected Papers
+
+* **Toward Physically Consistent Driving Video World Models under Challenging Trajectories**
+  *arXiv, 2026*
+  [[Paper]](https://arxiv.org/abs/2603.24506)
+
+* **Genesis: Multimodal Driving Scene Generation with Spatio-Temporal and Cross-Modal Consistency**
+  *arXiv, 2025*
+  [[Paper]](https://arxiv.org/abs/2506.07497)
+
+* **WorldSplat: Gaussian-Centric Feed-Forward 4D Scene Generation for Autonomous Driving**
+  *arXiv, 2025*
+  [[Paper]](https://arxiv.org/abs/2509.23402)
+
+* **Rethinking Driving World Model as Synthetic Data Generator for Perception Tasks**
+  *arXiv, 2025*
+  [[Paper]](https://arxiv.org/abs/2510.19195)
+
+---
+
+### 🧾 Full Publication List
+
+<details>
+<summary>Show all publications</summary>
+
+#### 2026
+
+* **Toward Physically Consistent Driving Video World Models under Challenging Trajectories**
+  *arXiv preprint*
+  [[Paper]](https://arxiv.org/abs/2603.24506)
+
+#### 2025
+
+* **Genesis: Multimodal Driving Scene Generation with Spatio-Temporal and Cross-Modal Consistency**
+  *arXiv preprint*
+  [[Paper]](https://arxiv.org/abs/2506.07497)
+
+* **WorldSplat: Gaussian-Centric Feed-Forward 4D Scene Generation for Autonomous Driving**
+  *arXiv preprint*
+  [[Paper]](https://arxiv.org/abs/2509.23402)
+
+* **Rethinking Driving World Model as Synthetic Data Generator for Perception Tasks**
+  *arXiv preprint*
+  [[Paper]](https://arxiv.org/abs/2510.19195)
+
+* **DriveMRP: Enhancing Vision-Language Models with Synthetic Motion Data for Motion Risk Prediction**
+  *arXiv preprint*
+  [[Paper]](https://arxiv.org/abs/2507.02948)
+
+#### 2023
+
+* **Research on Low Illumination Image Enhancement Algorithm and Its Application in Driver Monitoring System**
+  *WCX SAE World Congress Experience*
+
+#### 2022
+
+* **Driver Lane Change Intention Recognition Based on Attention Enhanced Residual-MBi-LSTM Network**
+  *IEEE Access*
+  🏆 42 Citations
+
+#### Others
+
+* **Pipeline for Fast Digital Twin Development and Integration in Driving Simulation**
+
+</details>
+
+---
