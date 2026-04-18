@@ -1,9 +1,11 @@
+<!-- 波浪横幅：优化渐变/字体/高度，更柔和不刺眼 -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=220&section=header&text=Yvonne-OH&fontSize=70&fontAlignY=38&animation=twinkling" />
+  <img src="https://capsule-render.vercel.app/api?type=soft&color=64748b,8b5cf6,ec4899&height=180&section=header&text=Yvonne-OH&fontSize=65&fontAlignY=40&fontColor=ffffff&stroke=ffffff&strokeWidth=0.5&animation=fadeIn" />
 </p>
 
+<!-- 打字机：换优雅字体/调整速度/精简文案，贴合机器人方向 -->
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=30&center=true&vCenter=true&width=550&height=60&duration=4500&lines=Hi+There!+👋;I'm+Yvonne!;Passionate+Developer;Open+Source+Enthusiast" />
+  <img src="https://readme-typing-svg.herokuapp.com/?font=Poppins&size=26&center=true&vCenter=true&width=600&height=50&duration=5000&pause=1000&color=8b5cf6&lines=Hi+There!+👋;Robotics+%26+Autonomous+Driving;Embedded+Dev+%26+Algorithm+Enthusiast" />
 </p>
 
 ---
