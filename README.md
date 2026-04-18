@@ -9,8 +9,8 @@
 ---
 
 ## 👩💻 About Me
-```text
-> Building. Learning. Scaling. Improving.
+- 🔭 Focus on **Robotics & Autonomous Driving** (perception/control)
+- ⚡ Fun fact: Hardware + Algorithm = My Passion
 
 ---
 
