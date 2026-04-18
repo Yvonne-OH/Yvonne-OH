@@ -8,7 +8,7 @@
 
 
 ## 👩💻 About Me
-- 🔭 Focus on **Robotics & Autonomous Driving** (perception/control)
+- 🔭 Focus on **🌍 World Model & 🤖 Robotics & 🚗 Autonomous Driving** 
 - ⚡ Fun fact: Hardware + Algorithm = My Passion
 
 ---
