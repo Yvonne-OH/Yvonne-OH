@@ -31,12 +31,12 @@
 
 ## 📈 GitHub Stats
 <p align="center">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=Yvonne-OH&show_icons=true&theme=tokyonight&count_private=true&hide_border=true" />
-  <img width="48%" src="https://github-readme-streak-stats.herokuapp.com/?user=Yvonne-OH&theme=tokyonight&hide_border=true" />
+  <img width="48%" height="200" src="https://github-readme-stats.vercel.app/api?username=Yvonne-OH&show_icons=true&theme=tokyonight&count_private=true&hide_border=true&include_all_commits=true" alt="stats" />
+  <img width="48%" height="200" src="https://github-readme-streak-stats.herokuapp.com/?user=Yvonne-OH&theme=tokyonight&hide_border=true" alt="streak" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Yvonne-OH&layout=compact&theme=tokyonight&hide_border=true" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Yvonne-OH&layout=compact&theme=tokyonight&hide_border=true" alt="top langs" />
 </p>
 
 ---
@@ -46,24 +46,11 @@
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=Yvonne-OH&theme=tokyonight&hide_border=true&bg_color=0d1117&color=58a6ff&line=4c8eda&point=ffffff" width="95%" />
 </p>
 
+---
+
+## 🏙️ 3D Contribution Graph
 <p align="center">
   <img src="https://github-profile-3d-contrib.yoshi389111.vercel.app/api/profile?username=Yvonne-OH&theme=tokyonight&hide_border=true" width="95%" />
-</p>
-
----
-
-## 🎮 Snake Animation
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/snake?username=Yvonne-OH&theme=tokyonight&hide_border=true" width="95%" />
-</p>
-
----
-
-## 🌟 Projects
-<p align="center">
-  <a href="https://github.com/Yvonne-OH/Yvonne-OH">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Yvonne-OH&repo=Yvonne-OH&theme=tokyonight&hide_border=true" width="45%" />
-  </a>
 </p>
 
 ---
