@@ -22,35 +22,33 @@
 
 ## 🛠 Tech Stack
 <p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=py,java,js,ts,react,nodejs,git,github,docker,mysql,aws&theme=dark&perline=8" />
-  </a>
+  <img src="https://skillicons.dev/icons?i=py,java,js,ts,react,nodejs,git,github,docker,mysql,aws&theme=dark&perline=8" />
 </p>
 
 ---
 
-## 📈 GitHub Stats
+## 📈 GitHub Stats (自动主题 + 完美对齐)
 <p align="center">
-  <img width="48%" height="200" src="https://github-readme-stats.vercel.app/api?username=Yvonne-OH&show_icons=true&theme=tokyonight&count_private=true&hide_border=true&include_all_commits=true" alt="stats" />
-  <img width="48%" height="200" src="https://github-readme-streak-stats.herokuapp.com/?user=Yvonne-OH&theme=tokyonight&hide_border=true" alt="streak" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Yvonne-OH&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&theme=tokyonight" />
+  <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=Yvonne-OH&hide_border=true&theme=tokyonight" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Yvonne-OH&layout=compact&theme=tokyonight&hide_border=true" alt="top langs" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Yvonne-OH&layout=compact&hide_border=true&theme=tokyonight" />
 </p>
 
 ---
 
 ## 🎨 Contribution Graph
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Yvonne-OH&theme=tokyonight&hide_border=true&bg_color=0d1117&color=58a6ff&line=4c8eda&point=ffffff" width="95%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Yvonne-OH&theme=tokyonight&hide_border=true" width="95%" />
 </p>
 
 ---
 
-## 🏙️ 3D Contribution Graph
+## 🏙️ 3D Contribution Graph（自动生成）
 <p align="center">
-  <img src="https://github-profile-3d-contrib.yoshi389111.vercel.app/api/profile?username=Yvonne-OH&theme=tokyonight&hide_border=true" width="95%" />
+  <img src="./profile-3d-contrib/profile-night-rainbow.svg" width="95%" />
 </p>
 
 ---
