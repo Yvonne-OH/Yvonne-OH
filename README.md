@@ -23,7 +23,7 @@
 ## 🛠 Tech Stack
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=py,arduino,apple,matlab,git,github,docker,linux,raspberrypi&theme=dark&perline=8" />
+    <img src="https://skillicons.dev/icons?i=py,arduino,apple,matlab,git,github,docker,linux&theme=dark&perline=8" />
   </a>
 </p>
 
