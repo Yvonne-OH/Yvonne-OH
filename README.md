@@ -9,14 +9,8 @@
 ---
 
 ## 👩💻 About Me
-- 🔭 I’m currently working on **Personal Projects**
-- 🌱 I’m currently learning **New Technologies**
-- 👯 I’m looking to collaborate on **Open Source**
-- 🤔 I’m looking for help with **Advanced Development**
-- 💬 Ask me about **Coding & Tech**
-- 📫 How to reach me: **your@email.com**
-- 😄 Pronouns: She/Her
-- ⚡ Fun fact: **Coffee + Code = ❤️**
+```text
+> Building. Learning. Scaling. Improving.
 
 ---
 
