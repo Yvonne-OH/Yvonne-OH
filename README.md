@@ -44,3 +44,31 @@
 <p align="center">
   <img src="https://visitor-badge.laobi.icu/badge?page_id=Yvonne-OH.Yvonne-OH" />
 </p>
+
+🧾 Full Publication List
+2026
+Toward Physically Consistent Driving Video World Models under Challenging Trajectories
+arXiv preprint
+[Paper]
+2025
+Genesis: Multimodal Driving Scene Generation with Spatio-Temporal and Cross-Modal Consistency
+arXiv preprint
+[Paper]
+WorldSplat: Gaussian-Centric Feed-Forward 4D Scene Generation for Autonomous Driving
+arXiv preprint
+[Paper]
+Rethinking Driving World Model as Synthetic Data Generator for Perception Tasks
+arXiv preprint
+[Paper]
+DriveMRP: Enhancing Vision-Language Models with Synthetic Motion Data for Motion Risk Prediction
+arXiv preprint
+[Paper]
+2023
+Research on Low Illumination Image Enhancement Algorithm and Its Application in Driver Monitoring System
+WCX SAE World Congress Experience
+2022
+Driver Lane Change Intention Recognition Based on Attention Enhanced Residual-MBi-LSTM Network
+IEEE Access
+(Citations: 42)
+Others
+Pipeline for Fast Digital Twin Development and Integration in Driving Simulation
