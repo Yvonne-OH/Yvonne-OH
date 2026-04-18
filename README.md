@@ -35,6 +35,17 @@
 </p>
 
 ---
+
+## ⏱ Weekly Coding Stats
+
+<p align="center">
+
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
+
+</p>
+
+---
 <p align="center">
   <img src="https://raw.githubusercontent.com/Yvonne-OH/Yvonne-OH/main/profile-3d-contrib/profile-season.svg" width="95%" />
 </p>
