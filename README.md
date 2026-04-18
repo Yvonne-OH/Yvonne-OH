@@ -35,10 +35,87 @@
 </p>
 
 ---
+## ⏱ Weekly Coding Stats
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Yvonne-OH&theme=github" />
-</p>
+
+<!--START_SECTION:waka-->
+![Code Time](http://img.shields.io/badge/Code%20Time-0%20secs-blue?style=flat)
+
+![Profile Views](http://img.shields.io/badge/Profile%20Views-0-blue?style=flat)
+
+![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-6.09%20million%20lines%20of%20code-blue?style=flat)
+
+**🐱 My GitHub Data** 
+
+> 📦 2.3 MB Used in GitHub's Storage 
+ > 
+> 🏆 60 Contributions in the Year 2026
+ > 
+> 🚫 Not Opted to Hire
+ > 
+> 📜 13 Public Repositories 
+ > 
+> 🔑 11 Private Repositories 
+ > 
+**I'm a Night 🦉** 
+
+```text
+🌞 Morning                131 commits         ██████░░░░░░░░░░░░░░░░░░░   22.02 % 
+🌆 Daytime                158 commits         ███████░░░░░░░░░░░░░░░░░░   26.55 % 
+🌃 Evening                159 commits         ███████░░░░░░░░░░░░░░░░░░   26.72 % 
+🌙 Night                  147 commits         ██████░░░░░░░░░░░░░░░░░░░   24.71 % 
+```
+📅 **I'm Most Productive on Thursday** 
+
+```text
+Monday                   90 commits          ████░░░░░░░░░░░░░░░░░░░░░   15.13 % 
+Tuesday                  36 commits          ██░░░░░░░░░░░░░░░░░░░░░░░   06.05 % 
+Wednesday                72 commits          ███░░░░░░░░░░░░░░░░░░░░░░   12.10 % 
+Thursday                 110 commits         █████░░░░░░░░░░░░░░░░░░░░   18.49 % 
+Friday                   103 commits         ████░░░░░░░░░░░░░░░░░░░░░   17.31 % 
+Saturday                 106 commits         ████░░░░░░░░░░░░░░░░░░░░░   17.82 % 
+Sunday                   78 commits          ███░░░░░░░░░░░░░░░░░░░░░░   13.11 % 
+```
+
+
+📊 **This Week I Spent My Time On** 
+
+```text
+🕑︎ Time Zone: Asia/Shanghai
+
+💬 Programming Languages: 
+No Activity Tracked This Week
+
+🔥 Editors: 
+No Activity Tracked This Week
+
+🐱‍💻 Projects: 
+No Activity Tracked This Week
+
+💻 Operating System: 
+No Activity Tracked This Week
+```
+
+**I Mostly Code in Python** 
+
+```text
+Python                   10 repos            █████████████░░░░░░░░░░░░   52.63 % 
+Jupyter Notebook         2 repos             ███░░░░░░░░░░░░░░░░░░░░░░   10.53 % 
+C                        1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   05.26 % 
+HTML                     1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   05.26 % 
+C#                       1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   05.26 % 
+```
+
+
+
+**Timeline**
+
+![Lines of Code chart](https://raw.githubusercontent.com/Yvonne-OH/Yvonne-OH/main/assets/bar_graph.png)
+
+
+ Last Updated on 18/04/2026 09:33:51 UTC
+<!--END_SECTION:waka-->
 
 ---
 <p align="center">
