@@ -5,7 +5,7 @@
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=26&duration=3500&pause=800&color=58A6FF&center=true&vCenter=true&width=600&lines=Hi+there+👋;I'm+Yvonne;Building+cool+things;Open+Source+Enthusiast" />
 </p>
----
+
 
 ## 👩💻 About Me
 - 🔭 Focus on **Robotics & Autonomous Driving** (perception/control)
