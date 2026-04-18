@@ -14,7 +14,7 @@
 - 👯 I’m looking to collaborate on **Open Source**
 - 🤔 I’m looking for help with **Advanced Development**
 - 💬 Ask me about **Coding & Tech**
-- 📫 How to reach me: **Your Email**
+- 📫 How to reach me: **your@email.com**
 - 😄 Pronouns: She/Her
 - ⚡ Fun fact: **Coffee + Code = ❤️**
 
@@ -27,28 +27,25 @@
 
 ---
 
-## 📈 GitHub Stats (自动主题 + 完美对齐)
+## 📈 GitHub Stats（同一行 + 自动适配主题）
 <p align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Yvonne-OH&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&theme=tokyonight" />
-  <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=Yvonne-OH&hide_border=true&theme=tokyonight" />
-</p>
-
-<p align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Yvonne-OH&layout=compact&hide_border=true&theme=tokyonight" />
+  <img height="165em" src="https://github-readme-stats.vercel.app/api?username=Yvonne-OH&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=00000000" />
+  <img height="165em" src="https://github-readme-streak-stats.herokuapp.com/?user=Yvonne-OH&hide_border=true&background=00000000" />
+  <img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Yvonne-OH&layout=compact&hide_border=true&bg_color=00000000" />
 </p>
 
 ---
 
 ## 🎨 Contribution Graph
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Yvonne-OH&theme=tokyonight&hide_border=true" width="95%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Yvonne-OH&theme=tokyo-night&hide_border=true" width="95%" />
 </p>
 
 ---
 
 ## 🏙️ 3D Contribution Graph（自动生成）
 <p align="center">
-  <img src="./profile-3d-contrib/profile-night-rainbow.svg" width="95%" />
+  <img src="https://raw.githubusercontent.com/Yvonne-OH/Yvonne-OH/main/profile-3d-contrib/profile-night-rainbow.svg" width="95%" />
 </p>
 
 ---
