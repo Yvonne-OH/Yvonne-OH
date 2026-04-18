@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=venom&height=250&text=Zhanqian Wu&fontSize=70&color=gradient&customColorList=12,20,24,30&stroke=000000&strokeWidth=1" />
+  <img src="https://capsule-render.vercel.app/api?type=venom&height=250&text=Zhanqian Wu&fontSize=70&color=gradient&customColorList=12,20,24,30&stroke=222222&strokeWidth=2.8" />
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=26&duration=3500&pause=800&color=58A6FF&center=true&vCenter=true&width=600&lines=Hi+there+👋; Building+cool+things;Open+Source+Enthusiast" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=26&duration=3500&pause=800&color=1F6FEB&center=true&vCenter=true&width=600&lines=Hi+there+👋;Building+cool+things;Open+Source+Enthusiast" />
 </p>
 
 
