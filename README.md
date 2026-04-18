@@ -40,11 +40,10 @@
 
 ---
 
-## 🏙️ 3D Contribution Graph（自动生成）
+## 🏙️ 3D Contribution Graph
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Yvonne-OH/Yvonne-OH/main/profile-3d-contrib/profile-night-rainbow.svg" width="95%" />
+  <img src="https://raw.githubusercontent.com/Yvonne-OH/Yvonne-OH/main/profile-3d-contrib/profile-season.svg" width="95%" />
 </p>
-
 ---
 
 <p align="center">
