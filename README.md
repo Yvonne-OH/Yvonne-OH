@@ -46,7 +46,7 @@
 </p>
 
 ## 🌤 Weather
-<!--WEATHER-->loading...<!--WEATHER-->
+<!--WEATHER-->singapore: ⛅  +79°F<!--WEATHER-->
 
 ---
 
