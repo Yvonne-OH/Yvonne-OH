@@ -59,7 +59,14 @@ Philadelphia   🌤         10°C  24km/h 74%      ❄️
 
 ## 💱 Exchange Rates
 <!--FX_BLOCK_START-->
-Loading...
+```
+Currency       Rate (→ CNY) Trend
+-------------- -------------- ------
+🇺🇸 USD   N/A            ⚠️
+🇯🇵 JPY   N/A            ⚠️
+🇪🇺 EUR   N/A            ⚠️
+🇬🇧 GBP   N/A            ⚠️
+```
 <!--FX_BLOCK_END-->
 
 ---
