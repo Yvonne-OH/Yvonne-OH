@@ -1,8 +1,8 @@
-name: Update Weather Table
+name: Update Weather
 
 on:
   schedule:
-    - cron: "0 */4 * * *"
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 jobs:
@@ -12,26 +12,54 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Generate weather block
+      - name: Install tools
+        run: sudo apt-get update && sudo apt-get install -y bc jq
+
+      - name: Generate weather dashboard
         run: |
           get_weather () {
             city=$1
-            curl -s "https://wttr.in/${city}?format=%c+%t&u"
-          }
 
-          BJ=$(get_weather Beijing)
-          SH=$(get_weather Shanghai)
-          WX=$(get_weather Wuxi)
-          PH=$(get_weather Philadelphia)
+            # JSON数据（更稳定）
+            data=$(curl -s "https://wttr.in/${city}?format=j1")
+
+            # 解析字段
+            temp_f=$(echo "$data" | jq -r '.current_condition[0].temp_F')
+            temp_c=$(echo "scale=0; ($temp_f - 32) * 5 / 9" | bc)
+
+            wind=$(echo "$data" | jq -r '.current_condition[0].windspeedKmph')
+            humidity=$(echo "$data" | jq -r '.current_condition[0].humidity')
+            icon=$(echo "$data" | jq -r '.current_condition[0].weatherDesc[0].value')
+
+            # 简化天气图标
+            case "$icon" in
+              *Sunny*) icon="☀️" ;;
+              *Rain*) icon="🌧" ;;
+              *Cloud*) icon="☁️" ;;
+              *Clear*) icon="🌙" ;;
+              *) icon="🌤" ;;
+            esac
+
+            # 温度颜色标记
+            tag=""
+            if [ "$temp_c" -ge 30 ]; then
+              tag="🔥"
+            elif [ "$temp_c" -le 10 ]; then
+              tag="❄️"
+            fi
+
+            printf "%-14s %-12s %-6s %-6s %-8s %s\n" \
+              "$city" "$icon" "${temp_c}°C" "${wind}km/h" "${humidity}%" "$tag"
+          }
 
           {
             echo '```'
-            printf "%-14s %s\n" "City" "Weather"
-            printf "%-14s %s\n" "--------------" "--------"
-            printf "%-14s %s\n" "Beijing" "$BJ"
-            printf "%-14s %s\n" "Shanghai" "$SH"
-            printf "%-14s %s\n" "Wuxi" "$WX"
-            printf "%-14s %s\n" "Philadelphia" "$PH"
+            printf "%-14s %-12s %-6s %-6s %-8s %s\n" "City" "Weather" "Temp" "Wind" "Humidity" ""
+            printf "%-14s %-12s %-6s %-6s %-8s %s\n" "--------------" "------------" "------" "------" "--------" ""
+            get_weather Beijing
+            get_weather Shanghai
+            get_weather Wuxi
+            get_weather Philadelphia
             echo '```'
           } > weather.txt
 
@@ -49,5 +77,5 @@ jobs:
           git config --global user.name "weather-bot"
           git config --global user.email "bot@users.noreply.github.com"
           git add README.md
-          git commit -m "update weather" || echo "no changes"
+          git commit -m "update weather dashboard" || echo "no changes"
           git push
