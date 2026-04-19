@@ -48,12 +48,12 @@
 ## 🌤 Weather
 <!--WEATHER_BLOCK_START-->
 ```
-City            Weather
----------------------- 
-Beijing         ☀️   +54°F
-Shanghai        ⛅  +63°F
-Wuxi            ☀️   +60°F
-Philadelphia    🌦   +50°F
+City           Weather
+-------------- --------
+Beijing        ☀️   +54°F
+Shanghai       ⛅  +63°F
+Wuxi           ☀️   +60°F
+Philadelphia   🌦   +50°F
 ```
 <!--WEATHER_BLOCK_END-->
 
