@@ -2,7 +2,7 @@ name: Update Weather Table
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "0 */4 * * *"
   workflow_dispatch:
 
 jobs:
@@ -16,7 +16,7 @@ jobs:
         run: |
           get_weather () {
             city=$1
-            curl -s "https://wttr.in/${city}?format=%c+%t"
+            curl -s "https://wttr.in/${city}?format=%c+%t&u"
           }
 
           BJ=$(get_weather Beijing)
@@ -24,16 +24,14 @@ jobs:
           WX=$(get_weather Wuxi)
           PH=$(get_weather Philadelphia)
 
-          pad () { printf "%-14s" "$1"; }
-
           {
             echo '```'
-            printf "%-15s %s\n" "City" "Weather"
-            printf "%-15s %s\n" "----------------------" ""
-            printf "%-15s %s\n" "Beijing" "$BJ"
-            printf "%-15s %s\n" "Shanghai" "$SH"
-            printf "%-15s %s\n" "Wuxi" "$WX"
-            printf "%-15s %s\n" "Philadelphia" "$PH"
+            printf "%-14s %s\n" "City" "Weather"
+            printf "%-14s %s\n" "--------------" "--------"
+            printf "%-14s %s\n" "Beijing" "$BJ"
+            printf "%-14s %s\n" "Shanghai" "$SH"
+            printf "%-14s %s\n" "Wuxi" "$WX"
+            printf "%-14s %s\n" "Philadelphia" "$PH"
             echo '```'
           } > weather.txt
 
@@ -46,7 +44,7 @@ jobs:
           ' README.md > README_new.md
           mv README_new.md README.md
 
-      - name: Commit
+      - name: Commit changes
         run: |
           git config --global user.name "weather-bot"
           git config --global user.email "bot@users.noreply.github.com"
