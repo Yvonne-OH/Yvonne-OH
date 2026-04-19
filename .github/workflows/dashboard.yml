@@ -1,12 +1,12 @@
-name: Update Dashboard
+name: Update Dev Dashboard
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "0 * * * *"   # 每小时更新
   workflow_dispatch:
 
 jobs:
-  update-dashboard:
+  dashboard:
     runs-on: ubuntu-latest
 
     steps:
@@ -14,34 +14,106 @@ jobs:
 
       - name: Generate dashboard
         run: |
-          # ===== 系统信息 =====
+          # ===== System =====
           OS=$(uname -s)
           CPU=$(nproc)
           MEM=$(free -h | awk '/Mem:/ {print $2}')
           DISK=$(df -h / | awk 'NR==2 {print $5}')
           TIME=$(date -u "+%Y-%m-%d %H:%M")
 
-          # ===== Quote（稳定来源）=====
-          QUOTE=$(curl -s https://api.quotable.io/random | jq -r '.content' 2>/dev/null)
+          # ===== Time zones =====
+          BJ=$(TZ=Asia/Shanghai date "+%H:%M")
+          TK=$(TZ=Asia/Tokyo date "+%H:%M")
+          NY=$(TZ=America/New_York date "+%H:%M")
+          LD=$(TZ=Europe/London date "+%H:%M")
 
-          # fallback（防 API 挂）
-          if [ -z "$QUOTE" ] || [ "$QUOTE" = "null" ]; then
-            QUOTE="Stay hungry, stay foolish."
+          # ===== GitHub stats =====
+          COMMITS=$(git rev-list --count HEAD)
+          LAST_COMMIT=$(git log -1 --pretty=format:'%cr')
+          BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+          # ===== Quotes（随机 + 不重复）=====
+          quotes=(
+          "Stay hungry, stay foolish."
+          "Code is poetry."
+          "Simplicity is the ultimate sophistication."
+          "Make it work, make it right, make it fast."
+          "Talk is cheap. Show me the code."
+          "Programs must be written for people to read."
+          "Any fool can write code that a computer can understand."
+          "First, solve the problem. Then, write the code."
+          "Experience is the name everyone gives to their mistakes."
+          "In order to be irreplaceable, one must always be different."
+          "Java is to JavaScript what car is to Carpet."
+          "Knowledge is power."
+          "Fix the cause, not the symptom."
+          "Optimism is an occupational hazard of programming."
+          "When in doubt, use brute force."
+          "Deleted code is debugged code."
+          "If debugging is the process of removing bugs, then programming must be the process of putting them in."
+          "Before software can be reusable it first has to be usable."
+          "Controlling complexity is the essence of programming."
+          "The best error message is the one that never shows up."
+          "Sometimes it pays to stay in bed on Monday."
+          "Walking on water and developing software from a specification are easy if both are frozen."
+          "The function of good software is to make the complex appear simple."
+          "Computers are fast; programmers keep it slow."
+          "The most disastrous thing that you can ever learn is your first programming language."
+          "Good code is its own best documentation."
+          "Truth can only be found in one place: the code."
+          "Without requirements or design, programming is the art of adding bugs."
+          "Measuring programming progress by lines of code is like measuring aircraft building progress by weight."
+          "Software and cathedrals are much the same."
+          )
+
+          LAST_FILE=".last_quote"
+
+          if [ -f "$LAST_FILE" ]; then
+            LAST_IDX=$(cat $LAST_FILE)
+          else
+            LAST_IDX=-1
           fi
+
+          while true; do
+            IDX=$((RANDOM % ${#quotes[@]}))
+            if [ "$IDX" != "$LAST_IDX" ]; then
+              break
+            fi
+          done
+
+          echo $IDX > $LAST_FILE
+          QUOTE=${quotes[$IDX]}
+
+          # ===== emoji 随机 =====
+          emojis=("🚀" "💡" "🔥" "🧠" "⚡" "✨")
+          EIDX=$((RANDOM % ${#emojis[@]}))
+          EMOJI=${emojis[$EIDX]}
+
+          QUOTE="$QUOTE $EMOJI"
 
           # ===== 输出 =====
           {
             echo '```'
-            echo "SYSTEM STATUS"
-            echo "-------------"
-            printf "%-14s %s\n" "OS" "$OS"
-            printf "%-14s %s\n" "CPU" "$CPU cores"
-            printf "%-14s %s\n" "Memory" "$MEM"
-            printf "%-14s %s\n" "Disk" "$DISK"
-            printf "%-14s %s\n" "Time (UTC)" "$TIME"
+            echo "🖥️ DEV TERMINAL"
+            echo "---------------"
+            printf "%-14s %s\n" "⚙️ System" "$OS | $CPU cores | $MEM RAM | $DISK 💾"
+            printf "%-14s %s\n" "🕒 Time (UTC)" "$TIME"
             echo ""
-            echo "QUOTE OF THE DAY"
-            echo "----------------"
+            echo "🌍 Time Zones"
+            echo "-------------"
+            printf "%-14s %s\n" "🇨🇳 Beijing" "$BJ"
+            printf "%-14s %s\n" "🇯🇵 Tokyo" "$TK"
+            printf "%-14s %s\n" "🇺🇸 New York" "$NY"
+            printf "%-14s %s\n" "🇬🇧 London" "$LD"
+            echo ""
+            echo "📊 Repo Stats"
+            echo "-------------"
+            printf "%-14s %s\n" "⭐ Commits" "$COMMITS"
+            printf "%-14s %s\n" "📝 Last" "$LAST_COMMIT"
+            printf "%-14s %s\n" "🌿 Branch" "$BRANCH"
+            echo ""
+            echo "🧠 Quote"
+            echo "--------"
             echo "\"$QUOTE\""
             echo '```'
           } > dashboard.txt
@@ -59,6 +131,6 @@ jobs:
         run: |
           git config --global user.name "dashboard-bot"
           git config --global user.email "bot@users.noreply.github.com"
-          git add README.md
+          git add README.md .last_quote
           git commit -m "update dashboard" || echo "no changes"
           git push
