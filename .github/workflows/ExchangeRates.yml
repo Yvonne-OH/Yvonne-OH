@@ -1,43 +1,101 @@
-- name: Generate FX dashboard
-  run: |
-    # 永远用 latest（避免周末炸）
-    data_today=$(curl -s "https://api.frankfurter.app/latest?from=USD")
+name: Update Exchange Rates
 
-    # fallback：再取一次 latest（模拟 yesterday）
-    data_yesterday=$(curl -s "https://api.frankfurter.app/latest?from=USD")
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
 
-    get_rate () {
-      code=$1
-      flag=$2
+jobs:
+  update-fx:
+    runs-on: ubuntu-latest
 
-      usd_to_cny=$(echo "$data_today" | jq -r '.rates.CNY')
-      usd_to_code=$(echo "$data_today" | jq -r ".rates.$code")
+    steps:
+      - uses: actions/checkout@v3
 
-      # 防止 jq 失败
-      if [ -z "$usd_to_code" ] || [ "$usd_to_code" = "null" ]; then
-        printf "%-14s %-14s %s\n" "$flag $code" "N/A" "⚠️"
-        return
-      fi
+      - name: Install tools
+        run: sudo apt-get update && sudo apt-get install -y jq bc
 
-      # 计算 1 code → CNY
-      rate=$(echo "$usd_to_cny / $usd_to_code" | bc -l)
-      rate=$(printf "%.3f" "$rate")
+      - name: Generate FX dashboard
+        run: |
+          # 获取最新数据日期
+          latest_json=$(curl -s "https://api.frankfurter.app/latest?from=USD")
+          latest_date=$(echo "$latest_json" | jq -r '.date')
 
-      # ⚠️ 暂时趋势固定（稳定优先）
-      trend="→"
+          # 找到“上一个有数据的日期”（最多回溯7天）
+          prev_date=""
+          for i in {1..7}; do
+            d=$(date -d "$latest_date -$i day" +%F)
+            test=$(curl -s "https://api.frankfurter.app/$d?from=USD")
+            has=$(echo "$test" | jq -r '.rates.CNY')
 
-      printf "%-14s %-14s %s\n" "$flag $code" "$rate" "$trend"
-    }
+            if [ "$has" != "null" ] && [ -n "$has" ]; then
+              prev_date=$d
+              prev_json="$test"
+              break
+            fi
+          done
 
-    {
-      echo '```'
-      printf "%-14s %-14s %s\n" "Currency" "Rate (→ CNY)" "Trend"
-      printf "%-14s %-14s %s\n" "--------------" "--------------" "------"
+          data_today="$latest_json"
+          data_yesterday="$prev_json"
 
-      get_rate USD "🇺🇸"
-      get_rate JPY "🇯🇵"
-      get_rate EUR "🇪🇺"
-      get_rate GBP "🇬🇧"
+          get_rate () {
+            code=$1
+            flag=$2
 
-      echo '```'
-    } > fx.txt
+            usd_to_cny=$(echo "$data_today" | jq -r '.rates.CNY')
+            usd_to_code=$(echo "$data_today" | jq -r ".rates.$code")
+
+            usd_to_cny_y=$(echo "$data_yesterday" | jq -r '.rates.CNY')
+            usd_to_code_y=$(echo "$data_yesterday" | jq -r ".rates.$code")
+
+            if [ -z "$usd_to_code" ] || [ "$usd_to_code" = "null" ]; then
+              printf "%-14s %-14s %s\n" "$flag $code" "N/A" "⚠️"
+              return
+            fi
+
+            # 计算：1 code → CNY
+            rate_today=$(echo "$usd_to_cny / $usd_to_code" | bc -l)
+            rate_yesterday=$(echo "$usd_to_cny_y / $usd_to_code_y" | bc -l)
+
+            rate=$(printf "%.3f" "$rate_today")
+
+            # 涨跌判断
+            trend="→"
+            if (( $(echo "$rate_today > $rate_yesterday" | bc -l) )); then
+              trend="📈"
+            elif (( $(echo "$rate_today < $rate_yesterday" | bc -l) )); then
+              trend="📉"
+            fi
+
+            printf "%-14s %-14s %s\n" "$flag $code" "$rate" "$trend"
+          }
+
+          {
+            echo '```'
+            printf "%-14s %-14s %s\n" "Currency" "Rate (→ CNY)" "Trend"
+            printf "%-14s %-14s %s\n" "--------------" "--------------" "------"
+
+            get_rate USD "🇺🇸"
+            get_rate JPY "🇯🇵"
+            get_rate EUR "🇪🇺"
+            get_rate GBP "🇬🇧"
+
+            echo '```'
+          } > fx.txt
+
+      - name: Inject into README
+        run: |
+          awk '
+          /<!--FX_BLOCK_START-->/ {print; system("cat fx.txt"); skip=1; next}
+          /<!--FX_BLOCK_END-->/ {skip=0}
+          !skip
+          ' README.md > README_new.md
+          mv README_new.md README.md
+
+      - name: Commit
+        run: |
+          git config --global user.name "fx-bot"
+          git config --global user.email "bot@users.noreply.github.com"
+          git add README.md
+          git commit -m "update fx rates" || echo "no changes"
+          git push
