@@ -1,0 +1,64 @@
+name: Update Dashboard
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+jobs:
+  update-dashboard:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Generate dashboard
+        run: |
+          # ===== 系统信息 =====
+          OS=$(uname -s)
+          CPU=$(nproc)
+          MEM=$(free -h | awk '/Mem:/ {print $2}')
+          DISK=$(df -h / | awk 'NR==2 {print $5}')
+          TIME=$(date -u "+%Y-%m-%d %H:%M")
+
+          # ===== Quote（稳定来源）=====
+          QUOTE=$(curl -s https://api.quotable.io/random | jq -r '.content' 2>/dev/null)
+
+          # fallback（防 API 挂）
+          if [ -z "$QUOTE" ] || [ "$QUOTE" = "null" ]; then
+            QUOTE="Stay hungry, stay foolish."
+          fi
+
+          # ===== 输出 =====
+          {
+            echo '```'
+            echo "SYSTEM STATUS"
+            echo "-------------"
+            printf "%-14s %s\n" "OS" "$OS"
+            printf "%-14s %s\n" "CPU" "$CPU cores"
+            printf "%-14s %s\n" "Memory" "$MEM"
+            printf "%-14s %s\n" "Disk" "$DISK"
+            printf "%-14s %s\n" "Time (UTC)" "$TIME"
+            echo ""
+            echo "QUOTE OF THE DAY"
+            echo "----------------"
+            echo "\"$QUOTE\""
+            echo '```'
+          } > dashboard.txt
+
+      - name: Inject into README
+        run: |
+          awk '
+          /<!--DASHBOARD_START-->/ {print; system("cat dashboard.txt"); skip=1; next}
+          /<!--DASHBOARD_END-->/ {skip=0}
+          !skip
+          ' README.md > README_new.md
+          mv README_new.md README.md
+
+      - name: Commit
+        run: |
+          git config --global user.name "dashboard-bot"
+          git config --global user.email "bot@users.noreply.github.com"
+          git add README.md
+          git commit -m "update dashboard" || echo "no changes"
+          git push
