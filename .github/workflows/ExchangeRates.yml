@@ -2,19 +2,6 @@ name: Update Exchange Rates
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
-  workflow_dispatch:
-
-jobs:
-  update-fx:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-name: Update Exchange Rates
-
-on:
-  schedule:
     - cron: "0 */6 * * *"   # every 6 hours
   workflow_dispatch:
 
@@ -103,65 +90,6 @@ jobs:
           mv README_new.md README.md
 
       - name: Commit changes
-        run: |
-          git config --global user.name "fx-bot"
-          git config --global user.email "bot@users.noreply.github.com"
-          git add README.md
-          git commit -m "update fx rates" || echo "no changes"
-          git push
-        run: |
-          BASE=CNY
-
-          today=$(date +%F)
-          yesterday=$(date -d "yesterday" +%F)
-
-          data_today=$(curl -s "https://api.exchangerate.host/latest?base=$BASE")
-          data_yesterday=$(curl -s "https://api.exchangerate.host/$yesterday?base=$BASE")
-
-          get_rate () {
-            code=$1
-            flag=$2
-
-            rate_today=$(echo "$data_today" | jq -r ".rates.$code")
-            rate_yesterday=$(echo "$data_yesterday" | jq -r ".rates.$code")
-
-            # 保留3位小数
-            rate=$(printf "%.3f" "$rate_today")
-
-            # 判断涨跌
-            trend="→"
-            if (( $(echo "$rate_today > $rate_yesterday" | bc -l) )); then
-              trend="📈"
-            elif (( $(echo "$rate_today < $rate_yesterday" | bc -l) )); then
-              trend="📉"
-            fi
-
-            printf "%-14s %-14s %s\n" "$flag $code" "$rate" "$trend"
-          }
-
-          {
-            echo '```'
-            printf "%-14s %-14s %s\n" "Currency" "Rate (→ CNY)" "Trend"
-            printf "%-14s %-14s %s\n" "--------------" "--------------" "------"
-
-            get_rate USD "🇺🇸"
-            get_rate JPY "🇯🇵"
-            get_rate EUR "🇪🇺"
-            get_rate GBP "🇬🇧"
-
-            echo '```'
-          } > fx.txt
-
-      - name: Inject into README
-        run: |
-          awk '
-          /<!--FX_BLOCK_START-->/ {print; system("cat fx.txt"); skip=1; next}
-          /<!--FX_BLOCK_END-->/ {skip=0}
-          !skip
-          ' README.md > README_new.md
-          mv README_new.md README.md
-
-      - name: Commit
         run: |
           git config --global user.name "fx-bot"
           git config --global user.email "bot@users.noreply.github.com"
