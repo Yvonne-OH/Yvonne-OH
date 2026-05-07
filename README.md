@@ -27,19 +27,22 @@
 ## 📈 GitHub Stats
 
 <p align="center">
-  <img height="165em" src="https://streak-stats.demolab.com/?user=Yvonne-OH&hide_border=true&background=00000000" />
-</p>
-
----
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Yvonne-OH/Yvonne-OH/main/profile-3d-contrib/profile-season.svg" width="95%" />
+  <img height="165em" src="https://streak-stats.demolab.com/?user=Yvonne-OH&hide_border=true&background=00000000&ring=58a6ff&fire=58a6ff&currStreakLabel=58a6ff" />
 </p>
 
 <p align="center">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=Yvonne-OH.Yvonne-OH" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Yvonne-OH&theme=github_dark" width="95%" />
 </p>
 
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Yvonne-OH&theme=github_dark" height="170em" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Yvonne-OH&theme=github_dark" height="170em" />
+</p>
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Yvonne-OH&theme=github_dark" height="170em" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Yvonne-OH&theme=github_dark&utcOffset=8" height="170em" />
+</p>
 
 ## 🌤 Weather
 <!--WEATHER_BLOCK_START-->
