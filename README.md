@@ -27,16 +27,7 @@
 ## 📈 GitHub Stats
 
 <p align="center">
-  <img height="165em" src="https://github-readme-stats.vercel.app/api?username=Yvonne-OH&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=00000000" />
   <img height="165em" src="https://streak-stats.demolab.com/?user=Yvonne-OH&hide_border=true&background=00000000" />
-</p>
-
-<p align="center">
-  <img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Yvonne-OH&layout=compact&hide_border=true&bg_color=00000000" />
-</p>
-
-<p align="center">
-  <img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=Yvonne-OH&bg_color=transparent&hide_border=true&color=58a6ff&line=58a6ff&point=ffffff" />
 </p>
 
 ---
@@ -48,7 +39,6 @@
 <p align="center">
   <img src="https://visitor-badge.laobi.icu/badge?page_id=Yvonne-OH.Yvonne-OH" />
 </p>
-
 ## 🌤 Weather
 <!--WEATHER_BLOCK_START-->
 ```
