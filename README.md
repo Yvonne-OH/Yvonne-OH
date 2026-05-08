@@ -41,6 +41,21 @@
   <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Yvonne-OH&theme=default&utcOffset=8" />
 </p>
 
+## 🧩 Contribution Grid
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Yvonne-OH&theme=github-dark&hide_border=true&bg_color=00000000" width="100%" />
+</p>
+
+<p align="center">
+  <img src="https://leetcode.card.workers.dev/Yvonne-OH?theme=dark&font=baloo&border=0" width="49%" />
+  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=Yvonne-OH&theme=github-dark&hide_border=true&layout=compact" width="49%" />
+</p>
+
+<!-- 乐高积木式 3D 贡献墙 -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ashutosh1919/master/master/images/lego-bricks-contribution.svg" alt="lego contribution" width="90%" />
+</p>
+
 ## 🌤 Weather
 <!--WEATHER_BLOCK_START-->
 ```
