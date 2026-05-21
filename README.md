@@ -100,6 +100,10 @@ Philadelphia   🌤         20°C  10km/h 89%
 
 ### 🌟 Selected Papers
 
+* **Xiaomi EV World Model: A Joint World Model Integrating Reconstruction and Generation for Autonomous Driving**
+  *arXiv, 2026*
+  [[Paper]](https://arxiv.org/abs/2605.18137)
+
 * **Toward Physically Consistent Driving Video World Models under Challenging Trajectories**
   *arXiv, 2026*
   [[Paper]](https://arxiv.org/abs/2603.24506)
