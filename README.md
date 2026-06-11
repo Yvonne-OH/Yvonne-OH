@@ -56,10 +56,10 @@
 ```
 City           Weather      Temp   Wind   Humidity 
 -------------- ------------ ------ ------ -------- 
-Beijing        ☀️       31°C  16km/h 27%      🔥
-Shanghai       ☀️       31°C  21km/h 29%      🔥
-Wuxi           ☀️       30°C  14km/h 35%      🔥
-Philadelphia   🌤         23°C  7km/h  94%      
+Beijing        🌙         18°C  12km/h 78%      
+Shanghai       🌙         25°C  17km/h 65%      
+Wuxi           🌙         26°C  15km/h 53%      
+Philadelphia   🌤         29°C  12km/h 63%      
 ```
 <!--WEATHER_BLOCK_END-->
 
