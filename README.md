@@ -6,7 +6,7 @@
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=26&duration=3500&pause=800&color=1F6FEB&center=true&vCenter=true&width=600&lines=Hi+there+👋;Building+cool+things;Open+Source+Enthusiast" />
 </p>
-
+---
 
 ## 👩💻 About Me
 - 🔭 Focus on **🌍 World Model & 🤖 Robotics & 🚗 Autonomous Driving** 
@@ -21,6 +21,49 @@
   </a>
 </p>
 
+
+---
+
+## 🚀 Featured Projects
+
+### **GigaWorld-1: A Roadmap to World Models for Robot Policy Evaluation**
+
+<p align="center">
+  <a href="https://open-gigaai.github.io/giga-world-1/">
+    <img src="https://img.shields.io/badge/Project-🌐%20Project%20Page-1F6FEB?style=for-the-badge" />
+  </a>
+  <a href="https://arxiv.org/abs/2607.02642">
+    <img src="https://img.shields.io/badge/arXiv-📄%20Paper-B31B1B?style=for-the-badge" />
+  </a>
+</p>
+
+> 🚀 Open-source training, inference, data processing, checkpoint conversion, and LoRA merge workflows for robot world models.
+
+- 🌐 **Project Page**: [open-gigaai.github.io/giga-world-1](https://open-gigaai.github.io/giga-world-1/)
+- 📄 **Paper**: [arXiv:2607.02642](https://arxiv.org/abs/2607.02642)
+- 🛠 **Open-sourced**: Training · Inference · Data Processing · Checkpoint Conversion · LoRA Merge
+
+### **Xiaomi EV World Model: A Joint World Model Integrating Reconstruction and Generation for Autonomous Driving**
+
+<p align="center">
+  <a href="https://JointWM.github.io">
+    <img src="https://img.shields.io/badge/Project-🌐%20Project%20Page-1F6FEB?style=for-the-badge" />
+  </a>
+  <a href="https://arxiv.org/pdf/2605.18137">
+    <img src="https://img.shields.io/badge/arXiv-📄%20Paper-B31B1B?style=for-the-badge" />
+  </a>
+</p>
+
+### **Genesis: Multimodal Driving Scene Generation with Spatio-Temporal and Cross-Modal Consistency**
+
+<p align="center">
+  <a href="https://xiaomi-research.github.io/genesis/">
+    <img src="https://img.shields.io/badge/Project-🌐%20Project%20Page-1F6FEB?style=for-the-badge" />
+  </a>
+  <a href="https://arxiv.org/pdf/2506.07497">
+    <img src="https://img.shields.io/badge/arXiv-📄%20Paper-B31B1B?style=for-the-badge" />
+  </a>
+</p>
 
 ---
 
@@ -100,6 +143,10 @@ Philadelphia   🌤         22°C  13km/h 79%
 
 ### 🌟 Selected Papers
 
+* **GigaWorld-1: A Roadmap to World Models for Robot Policy Evaluation**
+  *arXiv, 2026*
+  [[Paper]](https://arxiv.org/abs/2607.02642) · [[Project]](https://open-gigaai.github.io/giga-world-1/)
+
 * **Xiaomi EV World Model: A Joint World Model Integrating Reconstruction and Generation for Autonomous Driving**
   *arXiv, 2026*
   [[Paper]](https://arxiv.org/abs/2605.18137)
@@ -136,6 +183,10 @@ Philadelphia   🌤         22°C  13km/h 79%
 * **Toward Physically Consistent Driving Video World Models under Challenging Trajectories**
   *arXiv preprint*
   [[Paper]](https://arxiv.org/abs/2603.24506)
+
+* **GigaWorld-1: A Roadmap to World Models for Robot Policy Evaluation**
+  *arXiv preprint*
+  [[Paper]](https://arxiv.org/abs/2607.02642) · [[Project]](https://open-gigaai.github.io/giga-world-1/)
 
 #### 2025
 
